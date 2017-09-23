@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BaseProgressBar">
+        <attr name="progressPercentage" format="integer" />
+        <attr name="progressPadding" format="dimension" />
+        <attr name="cornerRadius" format="integer" />
+        <attr name="progressColor" format="reference" />
+        <attr name="progressBackgroundColor" format="reference" />
+        <attr name="showTitle" format="boolean" />
+    </declare-styleable>
+
+</resources>
