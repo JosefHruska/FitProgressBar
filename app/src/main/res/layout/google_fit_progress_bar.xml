@@ -5,16 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/layout_progress_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
-            android:id="@+id/layout_secondary_progress"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
 
         <LinearLayout
             android:id="@+id/vProgressBar"
@@ -22,6 +16,6 @@
             android:layout_height="match_parent"
             android:orientation="horizontal" />
 
-    </RelativeLayout>
+    </FrameLayout>
 
 </LinearLayout>

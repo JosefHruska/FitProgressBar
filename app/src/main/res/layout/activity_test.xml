@@ -11,9 +11,10 @@
         android:layout_width="320dp"
         android:layout_height="40dp"
         android:background="@color/colorAccent"
-        app:progressPercentage="25"
+        app:progressPercentage="100"
         app:cornerRadius="70"
-        app:progressPadding="16dp"
+        app:progressPadding="6dp"
+        app:progressBackgroundColor="@color/colorBackground"
         app:progressColor="@color/colorPrimary"/>
 
 

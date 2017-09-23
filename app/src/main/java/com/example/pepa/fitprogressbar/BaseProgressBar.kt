@@ -71,7 +71,7 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
         cornerRadious = attributes.getInt(R.styleable.BaseProgressBar_cornerRadius, DEFAULT_PROGRESS_RADIUS)
         progressColor = attributes.getInt(R.styleable.BaseProgressBar_progressColor, DEFAULT_PROGRESS_COLOR)
         progressPadding = attributes.getDimensionPixelSize(R.styleable.BaseProgressBar_progressPadding, DEFAULT_PROGRESS_PADDING)
-        progressBackgroundColor = attributes.getInt(R.styleable.BaseProgressBar_progressColor, DEFAULT_PROGRESS_COLOR)
+        progressBackgroundColor = attributes.getInt(R.styleable.BaseProgressBar_progressBackgroundColor, DEFAULT_BACKGROUND_COLOR)
 
         attributes.recycle()
 
@@ -94,8 +94,8 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
 
     // Redraw all view
     protected fun drawAll() {
-     //   drawBackgroundProgress()
-       // drawPadding()
+        drawBackgroundProgress()
+        drawPadding()
        // drawProgressReverse()
         drawPrimaryProgress()
         drawSecondaryProgress()
@@ -142,6 +142,10 @@ abstract class BaseProgressBar @JvmOverloads constructor(context: Context, attrs
         val progressParams = layoutProgress.layoutParams
         progressParams.width = progressWidth
         layoutProgress.layoutParams = progressParams
+    }
+
+    private fun drawPadding() {
+        progressBackground.setPadding(progressPadding, progressPadding, progressPadding, progressPadding)
     }
 
 
