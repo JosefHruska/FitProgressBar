@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vGuidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"/>
+
     <com.example.pepa.fitprogressbar.GoogleFitProgressBar
         android:id="@+id/vExampleProgress"
-        android:layout_width="320dp"
-        android:layout_height="40dp"
-        android:background="@color/colorAccent"
-        app:progressPercentage="100"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/vGuidelineLeft"
+        app:layout_constraintRight_toRightOf="@id/vGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progressPercentage="78"
         app:cornerRadius="70"
-        app:progressPadding="6dp"
-        app:progressBackgroundColor="@color/colorBackground"
-        app:progressColor="@color/colorPrimary"/>
+        app:progressPadding="0dp"
+        app:progressIconDimensions="16dp"
+        app:progressBackgroundColor="@color/colorWhite"
+        app:progressColorRes="@color/colorPrimary"/>
 
 
-</FrameLayout>
+
+
+</android.support.constraint.ConstraintLayout>
